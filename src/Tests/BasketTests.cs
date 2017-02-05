@@ -31,10 +31,10 @@ namespace Tests
             var basketId = Guid.NewGuid();
             var clientId = Guid.NewGuid();
             var createCommand = new CreateBasket(basketId.ToString(), clientId.ToString());
-            var buyButterCommand1 = new AddProduct("Butter", 0.80m);
-            var buyButterCommand2 = new AddProduct("Butter", 0.80m);
-            var buyBreadCommand1 = new AddProduct("Bread", 1.00m);
-            var buyBreadCommand2 = new AddProduct("Bread", 1.00m);
+            var buyButterCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Butter", 0.80m);
+            var buyButterCommand2 = new AddProduct(createCommand.Id, basketId.ToString(), "Butter", 0.80m);
+            var buyBreadCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Bread", 1.00m);
+            var buyBreadCommand2 = new AddProduct(createCommand.Id, basketId.ToString(), "Bread", 1.00m);
             var inMemoryModel = new TestModel();
 
             // act
@@ -56,9 +56,9 @@ namespace Tests
             var basketId = Guid.NewGuid();
             var clientId = Guid.NewGuid();
             var createCommand = new CreateBasket(basketId.ToString(), clientId.ToString());
-            var buyButterCommand1 = new AddProduct("Butter", 0.80m);
-            var buyBreadCommand1 = new AddProduct("Bread", 1.00m);
-            var buyMilkCommand1 = new AddProduct("Milk", 1.15m);
+            var buyButterCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Butter", 0.80m);
+            var buyBreadCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Bread", 1.00m);
+            var buyMilkCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
             var inMemoryModel = new TestModel();
 
             // act
@@ -79,10 +79,10 @@ namespace Tests
             var basketId = Guid.NewGuid();
             var clientId = Guid.NewGuid();
             var createCommand = new CreateBasket(basketId.ToString(), clientId.ToString());
-            var buyMilkCommand1 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand2 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand3 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand4 = new AddProduct("Milk", 1.15m);
+            var buyMilkCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand2 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand3 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand4 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
             var inMemoryModel = new TestModel();
 
             // act
@@ -104,17 +104,17 @@ namespace Tests
             var basketId = Guid.NewGuid();
             var clientId = Guid.NewGuid();
             var createCommand = new CreateBasket(basketId.ToString(), clientId.ToString());
-            var buyButterCommand1 = new AddProduct("Butter", 0.80m);
-            var buyButterCommand2 = new AddProduct("Butter", 0.80m);
-            var buyMilkCommand1 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand2 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand3 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand4 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand5 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand6 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand7 = new AddProduct("Milk", 1.15m);
-            var buyMilkCommand8 = new AddProduct("Milk", 1.15m);
-            var buyBreadCommand1 = new AddProduct("Bread", 1.00m);
+            var buyButterCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Butter", 0.80m);
+            var buyButterCommand2 = new AddProduct(createCommand.Id, basketId.ToString(), "Butter", 0.80m);
+            var buyMilkCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand2 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand3 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand4 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand5 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand6 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand7 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyMilkCommand8 = new AddProduct(createCommand.Id, basketId.ToString(), "Milk", 1.15m);
+            var buyBreadCommand1 = new AddProduct(createCommand.Id, basketId.ToString(), "Bread", 1.00m);
             var inMemoryModel = new TestModel();
 
             // act

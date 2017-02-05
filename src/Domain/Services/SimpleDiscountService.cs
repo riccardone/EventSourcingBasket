@@ -41,8 +41,9 @@ namespace Domain.Services
                 count++;
                 if (count != 2) continue;
                 var breadToDiscount = breads.Pop();
-                history.Add(new DiscountApplied(Guid.NewGuid().ToString(), "BreadAndButterDiscount", breadToDiscount.Id,
-                    breadToDiscount.Cost * 50 / 100));
+                history.Add(new DiscountApplied(Guid.NewGuid().ToString(), breadToDiscount.CausationId, breadToDiscount.CorrelationId,
+                    "BreadAndButterDiscount", breadToDiscount.Id,
+                    breadToDiscount.Cost*50/100));
                 count = 0;
             }
         }
@@ -60,7 +61,8 @@ namespace Domain.Services
                 var milkToDiscount = milks.Pop();
                 count++;
                 if (count < 4) continue;
-                history.Add(new DiscountApplied(Guid.NewGuid().ToString(), "MilkDiscount", milkToDiscount.Id, milkToDiscount.Cost));
+                history.Add(new DiscountApplied(Guid.NewGuid().ToString(), milkToDiscount.CausationId, milkToDiscount.CorrelationId, "MilkDiscount",
+                    milkToDiscount.Id, milkToDiscount.Cost));
                 count = 0;
             }
         }
