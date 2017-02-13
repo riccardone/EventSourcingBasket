@@ -52,6 +52,8 @@
     <Compile Include="Messages\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IDiscountService.cs" />
+    <Compile Include="Services\IFilter.cs" />
+    <Compile Include="Services\Pipeline.cs" />
     <Compile Include="Services\SimpleDiscountService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
